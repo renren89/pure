@@ -8,6 +8,7 @@ import webpackHotMiddlware from 'webpack-hot-middleware';
 
 const app = express();
 const compiler = webpack(config);
+const port = process.argv[2] || 3000;
 
 app.use((webpackMiddleware)(compiler, {
   noInfo: true,
